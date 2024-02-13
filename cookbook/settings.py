@@ -32,7 +32,7 @@ ALLOWED_HOSTS = ['http://localhost:5173/',
 
 
 CSRF_TRUSTED_ORIGINS = ['intolive-production.up.railway.app',
-                        'ademczw.github.io/intolive_vue']
+                        'ademczw.github.io/intolive_vue',  'null']
 # Application definition
 
 INSTALLED_APPS = [
