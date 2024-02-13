@@ -31,8 +31,8 @@ ALLOWED_HOSTS = ['http://localhost:5173/',
                  'ademczw.github.io/intolive_vue']
 
 
-CSRF_TRUSTED_ORIGINS = ['intolive-production.up.railway.app',
-                        'ademczw.github.io/intolive_vue',  'null']
+CSRF_TRUSTED_ORIGINS = ['http://ademczw.github.io/intolive_vue',
+                        'https://intolive-production.up.railway.app']
 # Application definition
 
 INSTALLED_APPS = [
