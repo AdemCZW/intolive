@@ -27,7 +27,8 @@ SECRET_KEY = 'django-insecure-df$*fs$7f2h2_so95p5v-u@m(1%^*h-h@mhpx46o1^@3194n^r
 DEBUG = True
 
 ALLOWED_HOSTS = ['http://localhost:5173/',
-                 '127.0.0.1', 'intolive-production.up.railway.app']
+                 '127.0.0.1', 'intolive-production.up.railway.app',
+                 'ademczw.github.io/intolive_vue']
 
 
 # Application definition
@@ -149,3 +150,6 @@ CHANNEL_LAYERS = {
         'BACKEND': 'channels.layers.InMemoryChannelLayer',
     },
 }
+
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True
