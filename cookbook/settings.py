@@ -50,12 +50,19 @@ MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
-    # 'django.middleware.csrf.CsrfViewMiddleware',
+    'django.middleware.csrf.CsrfViewMiddleware',
     'corsheaders.middleware.CorsMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+SECURE_CONTENT_TYPE_NOSNIFF = True
+SECURE_BROWSER_XSS_FILTER = True
+SECURE_REFERRER_POLICY = 'no-referrer'
+PERMISSIONS_POLICY = {
+    'interest-cohort': [],
+}
 
 CORS_ALLOW_ALL_ORIGINS = True
 
@@ -87,6 +94,7 @@ ASGI_APPLICATION = 'cookbook.routing.application'
 
 DATABASES = {
     'default': {
+        'ENGINE': 'django.db.backends.postgresql',
         'DATABASE_PRIVATE_URL': 'postgresql://postgres:e6GBddbcb3e15Aa453BFb11E3D6B33dC@postgres.railway.internal:5432/railway',
         'DATABASE_URL': 'postgresql://postgres:e6GBddbcb3e15Aa453BFb11E3D6B33dC@viaduct.proxy.rlwy.net:41935/railway',
         'PGDATABASE': 'railway',
