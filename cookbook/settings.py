@@ -32,7 +32,7 @@ ALLOWED_HOSTS = ['http://localhost:5173/',
 
 CSRF_TRUSTED_ORIGINS = ['https://ademczw.github.io/intolive_vue',
                         'https://intolive-production.up.railway.app']
-# Application definition
+
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -87,10 +87,7 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'cookbook.wsgi.application'
-
 ASGI_APPLICATION = 'cookbook.routing.application'
-
-
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
