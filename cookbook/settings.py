@@ -26,13 +26,13 @@ SECRET_KEY = 'django-insecure-df$*fs$7f2h2_so95p5v-u@m(1%^*h-h@mhpx46o1^@3194n^r
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['http://localhost:5173/',
-                 '127.0.0.1', 'intolive-production.up.railway.app',
-                 'ademczw.github.io/intolive_vue']
+ALLOWED_HOSTS = ['localhost:5173', '127.0.0.1',
+                 'intolive-production.up.railway.app', 'ademczw.github.io']
 
-CSRF_TRUSTED_ORIGINS = ['https://ademczw.github.io/intolive_vue',
-                        'https://intolive-production.up.railway.app']
+CSRF_TRUSTED_ORIGINS = ['ademczw.github.io',
+                        'intolive-production.up.railway.app', 'localhost:5173', '127.0.0.1']
 
+CORS_ALLOW_ALL_ORIGINS = True
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -65,8 +65,6 @@ SECURE_REFERRER_POLICY = 'no-referrer'
 PERMISSIONS_POLICY = {
     'interest-cohort': [],
 }
-
-CORS_ALLOW_ALL_ORIGINS = True
 
 ROOT_URLCONF = 'cookbook.urls'
 
