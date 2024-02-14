@@ -26,11 +26,11 @@ SECRET_KEY = 'django-insecure-df$*fs$7f2h2_so95p5v-u@m(1%^*h-h@mhpx46o1^@3194n^r
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost:5173', '127.0.0.1',
-                 'intolive-production.up.railway.app', 'ademczw.github.io']
+ALLOWED_ORIGINS = ['http://*', 'https://*']
 
-CSRF_TRUSTED_ORIGINS = ['ademczw.github.io',
-                        'intolive-production.up.railway.app', 'localhost:5173', '127.0.0.1']
+ALLOWED_HOSTS = ['*']
+
+CSRF_TRUSTED_ORIGINS = ALLOWED_ORIGINS.copy()
 
 CORS_ALLOW_ALL_ORIGINS = True
 
@@ -134,7 +134,6 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'staticfiles'),
 ]
 
-
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
@@ -143,7 +142,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 GRAPHENE = {
     "SCHEMA": "cookbook.schema.schema"
 }
-
 
 CHANNEL_LAYERS = {
     'default': {
