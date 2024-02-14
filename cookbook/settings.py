@@ -30,9 +30,7 @@ ALLOWED_HOSTS = ['http://localhost:5173/',
                  '127.0.0.1', 'intolive-production.up.railway.app',
                  'ademczw.github.io/intolive_vue']
 
-CORS_ALLOW_ALL_ORIGINS = True
-
-CSRF_TRUSTED_ORIGINS = ['http://ademczw.github.io/intolive_vue',
+CSRF_TRUSTED_ORIGINS = ['https://ademczw.github.io/intolive_vue',
                         'https://intolive-production.up.railway.app']
 # Application definition
 
