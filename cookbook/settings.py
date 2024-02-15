@@ -27,10 +27,10 @@ SECRET_KEY = 'django-insecure-df$*fs$7f2h2_so95p5v-u@m(1%^*h-h@mhpx46o1^@3194n^r
 DEBUG = True
 
 ALLOWED_HOSTS = ['localhost:5173', '127.0.0.1',
-                 'intolive-production.up.railway.app', 'ademczw.github.io']
+                 'intolive-production.up.railway.app', 'ademczw.github.io', 'null']
 
 CSRF_TRUSTED_ORIGINS = ['https://ademczw.github.io',
-                        'https://intolive-production.up.railway.app', 'localhost:5173', '127.0.0.1']
+                        'https://intolive-production.up.railway.app', 'localhost:5173', '127.0.0.1', 'null']
 
 CORS_ALLOW_ALL_ORIGINS = True
 
