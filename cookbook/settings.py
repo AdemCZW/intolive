@@ -29,8 +29,8 @@ DEBUG = True
 ALLOWED_HOSTS = ['localhost:5173', '127.0.0.1',
                  'intolive-production.up.railway.app', 'ademczw.github.io']
 
-CSRF_TRUSTED_ORIGINS = ['ademczw.github.io',
-                        'intolive-production.up.railway.app', 'localhost:5173', '127.0.0.1']
+CSRF_TRUSTED_ORIGINS = ['https://ademczw.github.io',
+                        'https://intolive-production.up.railway.app', 'localhost:5173', '127.0.0.1']
 
 CORS_ALLOW_ALL_ORIGINS = True
 
@@ -134,6 +134,7 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'staticfiles'),
 ]
 
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
@@ -142,6 +143,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 GRAPHENE = {
     "SCHEMA": "cookbook.schema.schema"
 }
+
 
 CHANNEL_LAYERS = {
     'default': {
