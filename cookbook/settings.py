@@ -27,9 +27,6 @@ SECRET_KEY = 'django-insecure-df$*fs$7f2h2_so95p5v-u@m(1%^*h-h@mhpx46o1^@3194n^r
 DEBUG = True
 
 ALLOWED_ORIGINS = ['http://*', 'https://*']
-
-ALLOWED_HOSTS = ['*']
-
 CSRF_TRUSTED_ORIGINS = ALLOWED_ORIGINS.copy()
 
 CORS_ALLOW_ALL_ORIGINS = True
