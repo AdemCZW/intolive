@@ -30,7 +30,8 @@ ALLOWED_HOSTS = ['localhost:5173', '127.0.0.1',
                  'intolive-production.up.railway.app', 'ademczw.github.io']
 
 CSRF_TRUSTED_ORIGINS = ['https://ademczw.github.io',
-                        'https://intolive-production.up.railway.app', 'https://localhost:5173', 'https://127.0.0.1:8000']
+                        'https://intolive-production.up.railway.app', 'https://localhost:5173', 'https://127.0.0.1']
+
 
 CORS_ALLOW_ALL_ORIGINS = True
 
@@ -91,7 +92,7 @@ ASGI_APPLICATION = 'cookbook.routing.application'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 DATABASES = {
-    'default': dj_database_url.config('postgresql://postgres:e6GBddbcb3e15Aa453BFb11E3D6B33dC@viaduct.proxy.rlwy.net:41935/railway')
+    'default': dj_database_url.parse('postgresql://postgres:e6GBddbcb3e15Aa453BFb11E3D6B33dC@viaduct.proxy.rlwy.net:41935/railway')
 }
 
 
