@@ -27,10 +27,10 @@ SECRET_KEY = 'django-insecure-df$*fs$7f2h2_so95p5v-u@m(1%^*h-h@mhpx46o1^@3194n^r
 DEBUG = True
 
 ALLOWED_HOSTS = ['localhost:5173', '127.0.0.1',
-                 'intolive-production.up.railway.app', 'ademczw.github.io', 'null']
+                 'intolive-production.up.railway.app', 'ademczw.github.io']
 
 CSRF_TRUSTED_ORIGINS = ['https://ademczw.github.io',
-                        'https://intolive-production.up.railway.app', 'localhost:5173', '127.0.0.1', 'null']
+                        'https://intolive-production.up.railway.app', 'https://localhost:5173', 'https://127.0.0.1:8000']
 
 CORS_ALLOW_ALL_ORIGINS = True
 
@@ -51,13 +51,14 @@ MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
-    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+CORS_ORIGIN_ALLOW_ALL = True
 
 SECURE_CONTENT_TYPE_NOSNIFF = True
 SECURE_BROWSER_XSS_FILTER = True
@@ -90,7 +91,7 @@ ASGI_APPLICATION = 'cookbook.routing.application'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 DATABASES = {
-    'default': dj_database_url.parse('postgresql://postgres:e6GBddbcb3e15Aa453BFb11E3D6B33dC@viaduct.proxy.rlwy.net:41935/railway')
+    'default': dj_database_url.config('postgresql://postgres:e6GBddbcb3e15Aa453BFb11E3D6B33dC@viaduct.proxy.rlwy.net:41935/railway')
 }
 
 
