@@ -53,10 +53,10 @@ class Ingredient(models.Model):
     name = models.CharField(max_length=100)
     notes = models.TextField()
     shipped = models.BooleanField(default=False)
-    size = models.CharField(max_length=10, choices=SIZE_CHOICES, default='M')
+    size = models.CharField(max_length=20, choices=SIZE_CHOICES, default='M')
     created_at = models.DateTimeField(default=timezone.now)
     color = models.CharField(
-        max_length=10, choices=COLOR_CHOICES, default='BLK')
+        max_length=20, choices=COLOR_CHOICES, default='BLK')
     objects = IngredientManager()
 
     def __str__(self):
@@ -114,12 +114,18 @@ class Uptostock(models.Model):
 
 class InToStock(models.Model):
     SIZE_CHOICES = (
+        ('XXXS', 'Extra Extra Extra Small'),
+        ('XXS', 'Extra Extra Small'),
+        ('XS', 'Extra Small'),
         ('S', 'Small'),
         ('M', 'Medium'),
         ('L', 'Large'),
         ('XL', 'Extra Large'),
         ('XXL', 'Extra Extra Large'),
         ('XXXL', 'Triple Extra Large'),
+        ('XXXXL', 'Four Times Extra Large'),
+        ('XXXXXL', 'Five Times Extra Large'),
+        ('XXXXXXL', 'Six Times Extra Large'),
     )
     COLOR_CHOICES = (
         ('BLK', 'Black'),
@@ -127,14 +133,24 @@ class InToStock(models.Model):
         ('OAT', 'Oat'),
         ('CML', 'Camel'),
         ('BRN', 'Brown'),
+        ('WHT', 'White'),
+        ('ORG', 'Orange'),
+        ('GRY', 'Gray'),
+        ('BLU', 'Blue'),
+        ('CAF', 'Caffe'),
+        ('PUR', 'Purple'),
+        ('PNK', 'Pink'),
+        ('BGE', 'Beige'),
+        ('OCL', 'One Color'),
+        ('YLW', 'Yellow'),
     )
     quantity = models.IntegerField(default=0)
     name = models.CharField(max_length=100)
     shipped = models.BooleanField(default=False)
-    size = models.CharField(max_length=4, choices=SIZE_CHOICES, default='M')
+    size = models.CharField(max_length=20, choices=SIZE_CHOICES, default='M')
     created_at = models.DateTimeField(default=timezone.now)
     color = models.CharField(
-        max_length=3, choices=COLOR_CHOICES, default='BLK')
+        max_length=20, choices=COLOR_CHOICES, default='BLK')
 
     def __str__(self):
         return self.name
@@ -142,12 +158,18 @@ class InToStock(models.Model):
 
 class PickUp(models.Model):
     SIZE_CHOICES = (
+        ('XXXS', 'Extra Extra Extra Small'),
+        ('XXS', 'Extra Extra Small'),
+        ('XS', 'Extra Small'),
         ('S', 'Small'),
         ('M', 'Medium'),
         ('L', 'Large'),
         ('XL', 'Extra Large'),
         ('XXL', 'Extra Extra Large'),
         ('XXXL', 'Triple Extra Large'),
+        ('XXXXL', 'Four Times Extra Large'),
+        ('XXXXXL', 'Five Times Extra Large'),
+        ('XXXXXXL', 'Six Times Extra Large'),
     )
     COLOR_CHOICES = (
         ('BLK', 'Black'),
@@ -155,14 +177,24 @@ class PickUp(models.Model):
         ('OAT', 'Oat'),
         ('CML', 'Camel'),
         ('BRN', 'Brown'),
+        ('WHT', 'White'),
+        ('ORG', 'Orange'),
+        ('GRY', 'Gray'),
+        ('BLU', 'Blue'),
+        ('CAF', 'Caffe'),
+        ('PUR', 'Purple'),
+        ('PNK', 'Pink'),
+        ('BGE', 'Beige'),
+        ('OCL', 'One Color'),
+        ('YLW', 'Yellow'),
     )
     quantity = models.IntegerField(default=0)
     name = models.CharField(max_length=100)
     shipped = models.BooleanField(default=False)
-    size = models.CharField(max_length=4, choices=SIZE_CHOICES, default='M')
+    size = models.CharField(max_length=20, choices=SIZE_CHOICES, default='M')
     created_at = models.DateTimeField(default=timezone.now)
     color = models.CharField(
-        max_length=3, choices=COLOR_CHOICES, default='BLK')
+        max_length=20, choices=COLOR_CHOICES, default='BLK')
 
     def __str__(self):
         return self.name
