@@ -53,10 +53,10 @@ class Ingredient(models.Model):
     name = models.CharField(max_length=100)
     notes = models.TextField()
     shipped = models.BooleanField(default=False)
-    size = models.CharField(max_length=4, choices=SIZE_CHOICES, default='M')
+    size = models.CharField(max_length=10, choices=SIZE_CHOICES, default='M')
     created_at = models.DateTimeField(default=timezone.now)
     color = models.CharField(
-        max_length=3, choices=COLOR_CHOICES, default='BLK')
+        max_length=10, choices=COLOR_CHOICES, default='BLK')
     objects = IngredientManager()
 
     def __str__(self):
