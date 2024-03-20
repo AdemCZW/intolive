@@ -19,12 +19,18 @@ class Category(models.Model):
 
 class Ingredient(models.Model):
     SIZE_CHOICES = (
+        ('XXXS', 'Extra Extra Extra Small'),
+        ('XXS', 'Extra Extra Small'),
+        ('XS', 'Extra Small'),
         ('S', 'Small'),
         ('M', 'Medium'),
         ('L', 'Large'),
         ('XL', 'Extra Large'),
         ('XXL', 'Extra Extra Large'),
         ('XXXL', 'Triple Extra Large'),
+        ('XXXXL', 'Four Times Extra Large'),
+        ('XXXXXL', 'Five Times Extra Large'),
+        ('XXXXXXL', 'Six Times Extra Large'),
     )
     COLOR_CHOICES = (
         ('BLK', 'Black'),
@@ -32,6 +38,16 @@ class Ingredient(models.Model):
         ('OAT', 'Oat'),
         ('CML', 'Camel'),
         ('BRN', 'Brown'),
+        ('WHT', 'White'),
+        ('ORG', 'Orange'),
+        ('GRY', 'Gray'),
+        ('BLU', 'Blue'),
+        ('CAF', 'Caffe'),
+        ('PUR', 'Purple'),
+        ('PNK', 'Pink'),
+        ('BGE', 'Beige'),
+        ('OCL', 'One Color'),
+        ('YLW', 'Yellow'),
     )
     quantity = models.IntegerField(default=0)
     name = models.CharField(max_length=100)
