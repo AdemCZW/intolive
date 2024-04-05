@@ -27,10 +27,10 @@ SECRET_KEY = 'django-insecure-df$*fs$7f2h2_so95p5v-u@m(1%^*h-h@mhpx46o1^@3194n^r
 DEBUG = True
 
 ALLOWED_HOSTS = ['localhost:5173', '127.0.0.1',
-                 'intolive-production.up.railway.app', 'ademczw.github.io']
+                 'intolive-production.up.railway.app', 'ademczw.github.io', 'null']
 
 CSRF_TRUSTED_ORIGINS = ['https://ademczw.github.io',
-                        'https://intolive-production.up.railway.app', 'https://localhost:5173', 'https://127.0.0.1']
+                        'https://intolive-production.up.railway.app', 'https://localhost:5173', 'https://127.0.0.1', 'https://null']
 
 
 CORS_ALLOW_ALL_ORIGINS = True
@@ -52,8 +52,8 @@ MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
-    'django.middleware.common.CommonMiddleware',
     'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
