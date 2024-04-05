@@ -29,10 +29,12 @@ DEBUG = True
 ALLOWED_HOSTS = ['localhost:5173', '127.0.0.1',
                  'intolive-production.up.railway.app', 'ademczw.github.io', 'null', 'http://*', 'https://*']
 
-CSRF_TRUSTED_ORIGINS = ALLOWED_ORIGINS.copy()
-
+CSRF_TRUSTED_ORIGINS = ['https://ademczw.github.io',
+                        'https://intolive-production.up.railway.app', 'https://localhost:5173', 'https://127.0.0.1', 'https://null']
 
 CORS_ALLOW_ALL_ORIGINS = True
+CSRF_COOKIE_SECURE = False
+SESSION_COOKIE_SECURE = False
 
 INSTALLED_APPS = [
     'django.contrib.admin',
