@@ -27,10 +27,10 @@ SECRET_KEY = 'django-insecure-df$*fs$7f2h2_so95p5v-u@m(1%^*h-h@mhpx46o1^@3194n^r
 DEBUG = True
 
 ALLOWED_HOSTS = ['localhost:5173', '127.0.0.1',
-                 'intolive-production.up.railway.app', 'ademczw.github.io', 'null', 'http://*', 'https://*']
+                 'intolive-production.up.railway.app', 'ademczw.github.io']
 
-CSRF_TRUSTED_ORIGINS = ['https://ademczw.github.io',
-                        'https://intolive-production.up.railway.app', 'https://localhost:5173', 'https://127.0.0.1', 'https://null']
+CSRF_TRUSTED_ORIGINS = ['https://*.ademczw.github.io',
+                        'https://*.intolive-production.up.railway.app', 'https://*.localhost:5173', 'https://127.0.0.1:8000']
 
 CORS_ALLOW_ALL_ORIGINS = True
 CSRF_COOKIE_SECURE = False
@@ -53,21 +53,14 @@ MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
-    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 CORS_ORIGIN_ALLOW_ALL = True
-
-SECURE_CONTENT_TYPE_NOSNIFF = True
-SECURE_BROWSER_XSS_FILTER = True
-SECURE_REFERRER_POLICY = 'no-referrer'
-PERMISSIONS_POLICY = {
-    'interest-cohort': [],
-}
 
 ROOT_URLCONF = 'cookbook.urls'
 
