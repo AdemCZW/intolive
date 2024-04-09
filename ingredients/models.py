@@ -48,6 +48,9 @@ class Ingredient(models.Model):
         ('BGE', 'Beige'),
         ('OCL', 'One Color'),
         ('YLW', 'Yellow'),
+        ('GRN', 'Green'),
+        ('APC', 'Apricot'),
+        ('ROS', 'Rose'),
     )
     quantity = models.IntegerField(default=0)
     name = models.CharField(max_length=100)
@@ -143,6 +146,9 @@ class InToStock(models.Model):
         ('BGE', 'Beige'),
         ('OCL', 'One Color'),
         ('YLW', 'Yellow'),
+        ('GRN', 'Green'),
+        ('APC', 'Apricot'),
+        ('ROS', 'Rose'),
     )
     quantity = models.IntegerField(default=0)
     name = models.CharField(max_length=100)
@@ -187,6 +193,9 @@ class PickUp(models.Model):
         ('BGE', 'Beige'),
         ('OCL', 'One Color'),
         ('YLW', 'Yellow'),
+        ('GRN', 'Green'),
+        ('APC', 'Apricot'),
+        ('ROS', 'Rose'),
     )
     quantity = models.IntegerField(default=0)
     name = models.CharField(max_length=100)
